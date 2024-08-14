@@ -1,4 +1,4 @@
-# education-second-hope-for-refugees
+# AI-Powered refugee Document Retrieval and Verification System
 
 AI-Powered Refugee Document Retrieval and Verification System
 Project Overview
