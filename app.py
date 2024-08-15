@@ -2,61 +2,32 @@ import streamlit as st
 from transformers import MarianMTModel, MarianTokenizer
 from gtts import gTTS
 import base64
-import os
-import requests
-import zipfile
 import logging
-from io import BytesIO
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Hugging Face model and tokenizer URLs
-model_url = 'https://huggingface.co/TresorB/TshilubaEnglishTranslationModel/resolve/main/New_best_model.zip'
-tokenizer_url = 'https://huggingface.co/TresorB/TshilubaEnglishTranslationTokenizer/resolve/main/New_best_tokenizer.zip'
+# Define Hugging Face model and tokenizer names
+model_name = 'TresorB/TshilubaEnglishTranslationModel'
+tokenizer_name = 'TresorB/TshilubaEnglishTranslationTokenizer'
 
-# Hugging Face token for authentication
-hf_token = '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'
-
-# Function to download a file from Hugging Face
-def download_file(url, token):
-    headers = {"Authorization": f"Bearer {token}"}
-    response = requests.get(url, headers=headers)
-    response.raise_for_status()  # Check for HTTP errors
-    return BytesIO(response.content)
-
-# Function to extract and load model and tokenizer
-def load_from_zip(zip_bytes, extract_to):
-    with zipfile.ZipFile(zip_bytes) as z:
-        z.extractall(extract_to)
-
-# Function to load the model from zipped file
+# Function to load the model from Hugging Face
 @st.cache_resource
 def load_model():
-    model_zip = download_file(model_url, hf_token)
-    model_path = "./model"
-    if not os.path.exists(model_path):
-        os.makedirs(model_path)
-        load_from_zip(model_zip, model_path)
     try:
-        model = MarianMTModel.from_pretrained(model_path)
+        model = MarianMTModel.from_pretrained(model_name)
         return model
     except Exception as e:
         logger.error(f"Failed to load model: {e}")
         st.error("Failed to load the model. Please check the logs for more details.")
         return None
 
-# Function to load the tokenizer from zipped file
+# Function to load the tokenizer from Hugging Face
 @st.cache_resource
 def load_tokenizer():
-    tokenizer_zip = download_file(tokenizer_url, hf_token)
-    tokenizer_path = "./tokenizer"
-    if not os.path.exists(tokenizer_path):
-        os.makedirs(tokenizer_path)
-        load_from_zip(tokenizer_zip, tokenizer_path)
     try:
-        tokenizer = MarianTokenizer.from_pretrained(tokenizer_path)
+        tokenizer = MarianTokenizer.from_pretrained(tokenizer_name)
         return tokenizer
     except Exception as e:
         logger.error(f"Failed to load tokenizer: {e}")
