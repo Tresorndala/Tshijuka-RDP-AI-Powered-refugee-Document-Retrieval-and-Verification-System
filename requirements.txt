@@ -1,6 +1,23 @@
 
-joblib==1.2.0
-numpy==1.24.3
-scikit-learn==1.2.2
-streamlit==1.35.0
+# Streamlit for creating the web app
+streamlit==1.20.0
 
+# Transformers library for loading and using pre-trained models
+transformers==4.31.0
+
+# Requests library for HTTP requests to download files
+requests==2.31.0
+
+# gTTS for converting text to speech
+gtts==2.3.2
+
+# Libraries for handling zip files and file system operations
+pyzipper==0.7.6
+
+# Logging for debugging and error handling
+# (Usually included by default in Python's standard library)
+# No need to specify in requirements.txt
+
+# Other essential packages for data handling and utility functions
+# These packages are typically already installed with Python distributions
+# and not included explicitly in requirements.txt, but can be added if needed.
