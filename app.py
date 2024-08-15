@@ -3,15 +3,16 @@ from transformers import MarianMTModel, MarianTokenizer
 from gtts import gTTS
 import base64
 import os
-import logging
 import requests
+import zipfile
+import logging
 from io import BytesIO
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Define Hugging Face model and tokenizer URLs
+# Hugging Face model and tokenizer URLs
 model_url = 'https://huggingface.co/TresorB/TshilubaEnglishTranslationModel/resolve/main/New_best_model.zip'
 tokenizer_url = 'https://huggingface.co/TresorB/TshilubaEnglishTranslationTokenizer/resolve/main/New_best_tokenizer.zip'
 
@@ -27,13 +28,10 @@ def download_file(url, token):
 
 # Function to extract and load model and tokenizer
 def load_from_zip(zip_bytes, extract_to):
-    import zipfile
-    import os
-    
     with zipfile.ZipFile(zip_bytes) as z:
         z.extractall(extract_to)
 
-# Function to load the model from Hugging Face
+# Function to load the model from zipped file
 @st.cache_resource
 def load_model():
     model_zip = download_file(model_url, hf_token)
@@ -49,7 +47,7 @@ def load_model():
         st.error("Failed to load the model. Please check the logs for more details.")
         return None
 
-# Function to load the tokenizer from Hugging Face
+# Function to load the tokenizer from zipped file
 @st.cache_resource
 def load_tokenizer():
     tokenizer_zip = download_file(tokenizer_url, hf_token)
