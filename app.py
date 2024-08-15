@@ -3,6 +3,7 @@ from transformers import MarianMTModel, MarianTokenizer
 from gtts import gTTS
 import base64
 import logging
+import os  # Import the os module
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
