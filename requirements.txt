@@ -1,17 +1,5 @@
-# Streamlit for creating the web app
 streamlit==1.20.0
-
-# Transformers library for loading and using pre-trained models
 transformers==4.31.0
-
-# Requests library for HTTP requests to download files
-requests==2.31.0
-
-# gTTS for converting text to speech
 gtts==2.3.2
-
-# If you need to handle zip files, you can use zipfile (part of Python standard library) instead
-# pyzipper is not required if you do not need password-protected zip file support
-# You can comment out or remove the following line if pyzipper is not essential
-# pyzipper==0.3.6
+requests==2.31.0
 
