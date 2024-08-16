@@ -1,7 +1,5 @@
 
-gtts==2.5.3
-streamlit==1.36.0
-transformers==4.43.3
-torch
-sentencepiece
-sacremoses
+torch==2.0.0 
+transformers==4.42.4
+streamlit
+gtts
