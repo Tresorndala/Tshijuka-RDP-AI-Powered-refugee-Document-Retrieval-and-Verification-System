@@ -1,10 +1,8 @@
 import streamlit as st
-from transformers import MarianMTModel, MarianTokenizer
+import logging
 from gtts import gTTS
 import base64
-import logging
 import os
-import torch
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -18,9 +16,13 @@ tokenizer_name = 'TresorB/TshilubaEnglishTranslationTokenizer'
 @st.cache_resource
 def load_model():
     try:
+        from transformers import MarianMTModel
         model = MarianMTModel.from_pretrained(model_name)
-        model.eval()  # Set the model to evaluation mode
         return model
+    except ImportError as e:
+        logger.error(f"Failed to import MarianMTModel: {e}")
+        st.error("Failed to import the model. Please check if the transformers library is correctly installed.")
+        return None
     except Exception as e:
         logger.error(f"Failed to load model: {e}")
         st.error("Failed to load the model. Please check the logs for more details.")
@@ -30,8 +32,13 @@ def load_model():
 @st.cache_resource
 def load_tokenizer():
     try:
+        from transformers import MarianTokenizer
         tokenizer = MarianTokenizer.from_pretrained(tokenizer_name)
         return tokenizer
+    except ImportError as e:
+        logger.error(f"Failed to import MarianTokenizer: {e}")
+        st.error("Failed to import the tokenizer. Please check if the transformers library is correctly installed.")
+        return None
     except Exception as e:
         logger.error(f"Failed to load tokenizer: {e}")
         st.error("Failed to load the tokenizer. Please check the logs for more details.")
@@ -59,8 +66,7 @@ if st.button("Translate"):
             inputs = tokenizer(tshiluba_text, return_tensors="pt", truncation=True, padding="max_length", max_length=128)
 
             # Generate translation
-            with torch.no_grad():
-                translated = model.generate(**inputs)
+            translated = model.generate(**inputs)
 
             # Decode the output
             translated_text = tokenizer.decode(translated[0], skip_special_tokens=True)
@@ -86,4 +92,5 @@ if st.button("Translate"):
             st.markdown(get_binary_file_downloader_html("translated_audio.mp3", 'Download translated audio'), unsafe_allow_html=True)
     else:
         st.warning("Please enter some Tshiluba text to translate.")
+
 
