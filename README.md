@@ -56,6 +56,8 @@ The initial focus will be on refugees from DR Congo and South Sudan in Nakivale,
 Explore the project here: 
 translation of requests prototype: [AI-Powered Refugee Document Retrieval and Verification System](https://ai-powered-refugee-document-retrieval-and-verification-system.streamlit.app/)
 
+hugging face repository to large funed tuned models i did :https://huggingface.co/TresorB
+
 prediction prototype:https://tresorndalabuzangusportsprediction-nfxunxxdtfupdf9ucpgq2o.streamlit.app/
 
 
