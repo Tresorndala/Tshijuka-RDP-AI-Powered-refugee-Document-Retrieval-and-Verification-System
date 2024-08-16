@@ -1,5 +1,7 @@
 
-torch==2.2.0  
-transformers==4.42.4
 streamlit
+transformers>=4.26.0  
+torch  
+sentencepiece  
 gtts
+
