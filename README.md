@@ -1,6 +1,6 @@
 AI-Powered Refugee Document Retrieval and Verification System
 Explore the project here:
-[AI-Powered Refugee Document Retrieval and Verification System](https://ai-powered-refugee-document-retrieval-and-verification-system.streamlit.app/)
+
 
 Overview
 The AI-Powered Refugee Document Retrieval and Verification System is designed to address the critical issue of lost educational documents among refugees. Utilizing advanced AI and blockchain technology, the system offers a secure, efficient, and user-friendly solution for recovering and validating essential academic records. Initially focused on refugees from DR Congo and South Sudan in the Nakivale refugee settlement, the project aims to remove a significant barrier to education and support displaced individuals in reclaiming their academic credentials.
