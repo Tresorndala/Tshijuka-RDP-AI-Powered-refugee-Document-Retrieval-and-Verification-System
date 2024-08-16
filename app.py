@@ -3,32 +3,34 @@ from transformers import MarianMTModel, MarianTokenizer
 from gtts import gTTS
 import base64
 import logging
-import os  # Import the os module
+import os
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Define Hugging Face model and tokenizer names
+# Hugging Face token
+hf_token = "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"
+
+# Hugging Face model and tokenizer names
 model_name = 'TresorB/TshilubaEnglishTranslationModel'
 tokenizer_name = 'TresorB/TshilubaEnglishTranslationTokenizer'
 
-# Function to load the model from Hugging Face
+# Load model and tokenizer with token
 @st.cache_resource
 def load_model():
     try:
-        model = MarianMTModel.from_pretrained(model_name)
+        model = MarianMTModel.from_pretrained(model_name, use_auth_token=hf_token)
         return model
     except Exception as e:
         logger.error(f"Failed to load model: {e}")
         st.error("Failed to load the model. Please check the logs for more details.")
         return None
 
-# Function to load the tokenizer from Hugging Face
 @st.cache_resource
 def load_tokenizer():
     try:
-        tokenizer = MarianTokenizer.from_pretrained(tokenizer_name)
+        tokenizer = MarianTokenizer.from_pretrained(tokenizer_name, use_auth_token=hf_token)
         return tokenizer
     except Exception as e:
         logger.error(f"Failed to load tokenizer: {e}")
@@ -41,6 +43,7 @@ st.title("MarianMT Model Translation")
 # Load Model and Tokenizer
 model = load_model()
 tokenizer = load_tokenizer()
+
 if model and tokenizer:
     st.success("Model and Tokenizer loaded successfully from Hugging Face.")
 else:
@@ -53,16 +56,11 @@ tshiluba_text = st.text_area("Enter Tshiluba text to translate")
 if st.button("Translate"):
     if tshiluba_text and model and tokenizer:
         with st.spinner("Translating..."):
-            # Tokenize input
             inputs = tokenizer(tshiluba_text, return_tensors="pt", truncation=True, padding="max_length", max_length=128)
-
-            # Generate translation
             translated = model.generate(**inputs)
-
-            # Decode the output
             translated_text = tokenizer.decode(translated[0], skip_special_tokens=True)
             st.success(f"Translated text: {translated_text}")
-            
+
             # Convert translated text to speech
             tts = gTTS(translated_text)
             tts.save("translated_audio.mp3")
@@ -72,7 +70,7 @@ if st.button("Translate"):
             audio_bytes = audio_file.read()
             st.audio(audio_bytes, format="audio/mp3")
 
-            # Optionally provide a download link
+            # Provide download link for audio
             def get_binary_file_downloader_html(bin_file, file_label='File'):
                 with open(bin_file, 'rb') as f:
                     data = f.read()
@@ -83,3 +81,4 @@ if st.button("Translate"):
             st.markdown(get_binary_file_downloader_html("translated_audio.mp3", 'Download translated audio'), unsafe_allow_html=True)
     else:
         st.warning("Please enter some Tshiluba text to translate.")
+
