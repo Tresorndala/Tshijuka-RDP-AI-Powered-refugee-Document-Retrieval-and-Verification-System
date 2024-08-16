@@ -53,8 +53,10 @@ Support Page: Features an AI-powered chatbot and a contact form for additional a
 Next Steps
 The initial focus will be on refugees from DR Congo and South Sudan in Nakivale, with plans to expand to additional regions and populations. The project aims to effectively address the issue of lost documents and support refugees in accessing academic and professional opportunities despite their challenges.
 
-Explore the project here: [AI-Powered Refugee Document Retrieval and Verification System](https://ai-powered-refugee-document-retrieval-and-verification-system.streamlit.app/)
+Explore the project here: 
+translation of requests prototype: [AI-Powered Refugee Document Retrieval and Verification System](https://ai-powered-refugee-document-retrieval-and-verification-system.streamlit.app/)
 
+prediction prototype:https://tresorndalabuzangusportsprediction-nfxunxxdtfupdf9ucpgq2o.streamlit.app/
 
 
 
