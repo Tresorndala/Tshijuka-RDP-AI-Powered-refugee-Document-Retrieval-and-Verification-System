@@ -1,59 +1,63 @@
-# AI-Powered refugee Document Retrieval and Verification System:  https://ai-powered-refugee-document-retrieval-and-verification-system.streamlit.app/
-
 AI-Powered Refugee Document Retrieval and Verification System
-Project Overview
-The AI-Powered Document Retrieval and Verification System is designed to assist refugees in recovering and verifying lost academic documents from their home countries. By utilizing advanced AI and blockchain technology, the system provides a secure, efficient, and user-friendly solution for document retrieval and validation. The project is initially focused on refugees from DR Congo and South Sudan, specifically targeting those present in the Nakivale refugee settlement.
+Explore the project here: AI-Powered Refugee Document Retrieval and Verification System
 
-Key Components and Data Integration
-Document Request Generation (NLP Model)
+Overview
+The AI-Powered Refugee Document Retrieval and Verification System is designed to address the critical issue of lost educational documents among refugees. Utilizing advanced AI and blockchain technology, the system offers a secure, efficient, and user-friendly solution for recovering and validating essential academic records. Initially focused on refugees from DR Congo and South Sudan in the Nakivale refugee settlement, the project aims to remove a significant barrier to education and support displaced individuals in reclaiming their academic credentials.
 
-Data:
-Text data of formal document request letters.
-Database of educational institutions in DR Congo and South Sudan.
-Parallel corpora for language translation.
-Model: Fine-tuned NLP model for generating and translating request letters.
-Integration: The model automatically generates and translates formal requests based on user inputs.
-Document Tracking (Predictive Model)
+Motivation
+Our analysis of refugee education challenges in Uganda reveals the severe impact of lost educational documents. Refugees fleeing conflict zones often struggle with missing records, exacerbating existing barriers and impeding academic progress. The following stories highlight the need for a robust solution to this issue:
 
-Data:
-Historical document request data.
-Communication logs between users, institutions, and the platform.
-Model: Predictive model to estimate document retrieval status and time.
-Integration: Provides real-time status updates and estimated completion times.
-Document Verification (AI-Based Validation Model)
+Key Findings and Impact Stories
+Tresor Ndala Buzangu's Journey: Tresor faced a critical challenge when he could not provide a passport required for a scholarship at Ashesi University after relocating to Nakivale refugee camp. This delay nearly cost him his place and scholarship, illustrating the systemic barriers refugees face due to lost or inaccessible documents.
 
-Data:
-Scanned copies of legitimate documents.
-Associated metadata (issuing institution, date, type).
-Blockchain records for verification.
-Model: Document verification model using CNN for image recognition and OCR for text extraction.
-Integration: Validates document authenticity by cross-checking with existing records and blockchain logs.
-AI Chatbot Support (Conversational AI Model)
+John's Rejection Due to Missing Documents: John struggled with the absence of essential documents, including those related to his father's whereabouts and his own school records. His experience highlights the significant gaps in the system that prevent refugees from accessing educational opportunities.
 
-Data:
-FAQ data and common issues.
-Historical support tickets.
-Model: Conversational AI model trained on Q&A data.
-Integration: Powers a chatbot to provide real-time support and guidance during the document retrieval process.
-Training Process and AI Integration
-Data Collection: Gather data relevant to each component, focusing on the educational institutions and document types specific to DR Congo and South Sudan.
-Model Training: Train each model on its respective data, ensuring accuracy and relevance to the specific needs of the target populations.
-Integration: Deploy the models within the system to automate the process from request generation to document verification and user support.
-Streamlit App Functionality
-User Interface Layout
+Adelard's Experience with CIYOTA: Adelard benefited from CIYOTA's support in accessing a Mastercard scholarship at Ashesi University. However, he noted that many peers could not take advantage of similar opportunities due to missing documents, underscoring the need for comprehensive solutions to document loss.
 
-Homepage: Brief introduction and navigation options such as "Request Document," "Track Request," "Verify Document," and "Support."
-Request Document Page: Allows users to fill in personal information and document details, then submit the request.
-Track Request Page: Enables users to track the status of their document request.
-Verify Document Page: Provides an option to upload and verify documents.
-Support Page: Includes an AI-powered chatbot and a contact form for additional assistance.
-Workflow
+Jeane's Challenges as a Female Refugee: Jeane's story reveals additional hurdles faced by female refugees. She highlighted concerns about menstrual health affecting school attendance and the challenges her peers face due to lost school documents from DR Congo. This underscores the need for targeted interventions addressing both educational and personal barriers.
 
-User Interaction: Users input their information and submit a document request.
-AI-Generated Request: The NLP model generates a formal request in the selected language.
-Request Tracking: The predictive model provides updates on the status and expected retrieval time.
-Document Upload & Verification: Users upload the retrieved document, which is then verified using AI and blockchain.
-Support: The AI chatbot offers guidance and troubleshooting throughout the process.
+Proposed Solution
+To address these critical issues, the AI-Powered Document Retrieval and Verification System provides:
+
+Automated Document Requests: Simplifies the process of requesting lost documents through an automated system, reducing bureaucratic barriers and facilitating document recovery.
+
+Blockchain Verification: Ensures the authenticity and security of retrieved documents using blockchain technology, preventing forgery and misuse.
+
+AI-Based Validation: Utilizes AI to efficiently validate and process documents, aiding refugees in meeting educational and employment requirements.
+
+Multilingual Support: Offers translation services for low-resource languages such as Tshiluba and Lingala, ensuring accessibility for a diverse refugee population.
+
+Training and Fine-Tuning Models
+Data Collection: Gather relevant data including text data for document requests, historical document request logs, scanned copies of legitimate documents, and FAQ data for support.
+
+Model Training:
+
+Document Request Generation: Fine-tune an NLP model on parallel corpora to generate and translate formal document requests.
+Document Tracking: Train a predictive model on historical request data and communication logs to estimate retrieval status and completion times.
+Document Verification: Develop an AI-based validation model using CNN for image recognition and OCR for text extraction, integrating with blockchain records for authenticity checks.
+AI Chatbot Support: Train a conversational AI model on FAQ data and support tickets to provide real-time assistance.
+Integration: Deploy these models within the system to automate the process from request generation to document verification and user support, ensuring seamless operation.
+
+App Functionality
+Homepage: Provides an introduction to the system and navigation options such as "Request Document," "Track Request," "Verify Document," and "Support."
+
+Request Document Page: Allows users to input personal information and document details, submit requests, and receive automated, translated requests.
+
+Track Request Page: Enables users to track the status of their document requests with real-time updates and estimated completion times.
+
+Verify Document Page: Users can upload documents for verification, which are processed and validated using AI and blockchain technology.
+
+Support Page: Features an AI-powered chatbot and a contact form for additional assistance, providing real-time support and guidance.
+
 Next Steps
-As the project develops, the scope may expand to include additional countries and refugee populations. The initial focus remains on ensuring the system effectively serves the specific needs of refugees from DR Congo and South Sudan in the Nakivale refugee settlement.
+The initial focus will be on refugees from DR Congo and South Sudan in Nakivale, with plans to expand to additional regions and populations. The project aims to effectively address the issue of lost documents and support refugees in accessing academic and professional opportunities despite their challenges.
+
+Explore the project here: AI-Powered Refugee Document Retrieval and Verification System
+
+
+
+
+
+
+
 
