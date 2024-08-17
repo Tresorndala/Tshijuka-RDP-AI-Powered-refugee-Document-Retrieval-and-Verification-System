@@ -26,12 +26,18 @@ The AI-Powered Refugee Document Retrieval and Verification System uses several A
 NLP Model for Document Request Generation:
 
 Importance: This model is fine-tuned to generate and translate formal document requests. It simplifies the process of requesting lost documents by automatically creating well-structured and culturally appropriate requests in multiple languages, ensuring accessibility for refugees from diverse linguistic backgrounds.
+
+
+
 Predictive Model for Document Tracking:
 
 Importance: This model is trained on historical request data and communication logs. It predicts the status and estimated retrieval time of document requests, providing refugees with real-time updates and transparency throughout the process. This feature helps manage expectations and reduces anxiety related to document recovery.
+
+
 AI-Based Validation Model (CNN with OCR):
 
 Importance: This model combines convolutional neural networks (CNN) with optical character recognition (OCR) to validate the authenticity of retrieved documents. By cross-referencing with blockchain records, it ensures that the documents are legitimate, preventing fraud and providing a secure verification process crucial for educational and employment purposes.
+
 Conversational AI Model for Chatbot Support:
 
 Importance: The AI-powered chatbot, trained on FAQ data and historical support tickets, offers real-time assistance to users. It enhances user experience by providing instant support, guiding them through the document retrieval process, and addressing common issues, making the system more user-friendly and accessible.
