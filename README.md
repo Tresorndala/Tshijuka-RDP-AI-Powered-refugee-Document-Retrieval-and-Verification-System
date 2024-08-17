@@ -3,6 +3,7 @@ Explore the project here:
 
 
 Overview
+
 The AI-Powered Refugee Document Retrieval and Verification System is designed to address the critical issue of lost educational documents among refugees. Utilizing advanced AI and blockchain technology, the system offers a secure, efficient, and user-friendly solution for recovering and validating essential academic records. Initially focused on refugees from DR Congo and South Sudan in the Nakivale refugee settlement, the project aims to remove a significant barrier to education and support displaced individuals in reclaiming their academic credentials.
 
 Motivation
@@ -20,26 +21,27 @@ Jeane's Challenges as a Female Refugee: Jeane's story reveals additional hurdles
 Proposed Solution
 To address these critical issues, the AI-Powered Document Retrieval and Verification System provides:
 
-Automated Document Requests: Simplifies the process of requesting lost documents through an automated system, reducing bureaucratic barriers and facilitating document recovery.
+The AI-Powered Refugee Document Retrieval and Verification System uses several AI models, each playing a crucial role in solving the challenges faced by refugees due to lost educational documents. Here's the importance of each model:
 
-Blockchain Verification: Ensures the authenticity and security of retrieved documents using blockchain technology, preventing forgery and misuse.
+NLP Model for Document Request Generation:
 
-AI-Based Validation: Utilizes AI to efficiently validate and process documents, aiding refugees in meeting educational and employment requirements.
+Importance: This model is fine-tuned to generate and translate formal document requests. It simplifies the process of requesting lost documents by automatically creating well-structured and culturally appropriate requests in multiple languages, ensuring accessibility for refugees from diverse linguistic backgrounds.
+Predictive Model for Document Tracking:
 
-Multilingual Support: Offers translation services for low-resource languages such as Tshiluba and Lingala, ensuring accessibility for a diverse refugee population.
+Importance: This model is trained on historical request data and communication logs. It predicts the status and estimated retrieval time of document requests, providing refugees with real-time updates and transparency throughout the process. This feature helps manage expectations and reduces anxiety related to document recovery.
+AI-Based Validation Model (CNN with OCR):
 
-Training and Fine-Tuning Models
-Data Collection: Gather relevant data including text data for document requests, historical document request logs, scanned copies of legitimate documents, and FAQ data for support.
+Importance: This model combines convolutional neural networks (CNN) with optical character recognition (OCR) to validate the authenticity of retrieved documents. By cross-referencing with blockchain records, it ensures that the documents are legitimate, preventing fraud and providing a secure verification process crucial for educational and employment purposes.
+Conversational AI Model for Chatbot Support:
 
-Model Training:
+Importance: The AI-powered chatbot, trained on FAQ data and historical support tickets, offers real-time assistance to users. It enhances user experience by providing instant support, guiding them through the document retrieval process, and addressing common issues, making the system more user-friendly and accessible.
+Each model is integrated into the system to automate and streamline the process of document retrieval and verification, ensuring that refugees can reclaim their academic credentials and pursue educational and professional opportunities despite the challenges they face.
 
-Document Request Generation: Fine-tune an NLP model on parallel corpora to generate and translate formal document requests.
-Document Tracking: Train a predictive model on historical request data and communication logs to estimate retrieval status and completion times.
-Document Verification: Develop an AI-based validation model using CNN for image recognition and OCR for text extraction, integrating with blockchain records for authenticity checks.
-AI Chatbot Support: Train a conversational AI model on FAQ data and support tickets to provide real-time assistance.
-Integration: Deploy these models within the system to automate the process from request generation to document verification and user support, ensuring seamless operation.
+
+
 
 App Functionality
+
 Homepage: Provides an introduction to the system and navigation options such as "Request Document," "Track Request," "Verify Document," and "Support."
 
 Request Document Page: Allows users to input personal information and document details, submit requests, and receive automated, translated requests.
@@ -51,9 +53,11 @@ Verify Document Page: Users can upload documents for verification, which are pro
 Support Page: Features an AI-powered chatbot and a contact form for additional assistance, providing real-time support and guidance.
 
 Next Steps
+
 The initial focus will be on refugees from DR Congo and South Sudan in Nakivale, with plans to expand to additional regions and populations. The project aims to effectively address the issue of lost documents and support refugees in accessing academic and professional opportunities despite their challenges.
 
 Explore the project here: 
+
 translation of requests prototype: [AI-Powered Refugee Document Retrieval and Verification System](https://ai-powered-refugee-document-retrieval-and-verification-system.streamlit.app/)
 
 hugging face repository to large funed tuned models i did :https://huggingface.co/TresorB
