@@ -67,7 +67,9 @@ Next Steps
 
 The initial focus will be on refugees from DR Congo and South Sudan in Nakivale, with plans to expand to additional regions and eve non refugees populations meaning everyone who has lost his document could get them through our platform. The project aims to effectively address the issue of lost documents and support refugees in accessing academic and professional opportunities despite their challenges.
 
-Explore the project here: 
+Explore the project here:
+
+research paper: https://github.com/Tresorndala/AI-Powered-refugee-Document-Retrieval-and-Verification-System/blob/main/Article%20research%20refugee%20education.pdf
 
 translation of requests prototype: [AI-Powered Refugee Document Retrieval and Verification System](https://ai-powered-refugee-document-retrieval-and-verification-system.streamlit.app/)
 
